@@ -31,4 +31,6 @@ export const DefenseLevel = styled(TextH1)`
   color: ${({ theme }) => theme.colors.textSecondary};
 `;
 
-export const DefenseHitPoints = styled(TextH2)``;
+export const DefenseHitPoints = styled(TextH2)`
+  color: ${({ theme }) => theme.colors.textSecondary};
+`;

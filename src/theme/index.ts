@@ -6,11 +6,13 @@ type Colors = {
   highlightedText: string;
   levelBackground: string;
   highlightedLevelBackground: string;
+  white: string;
 };
 
 type Fonts = {
   regular: string;
   medium: string;
+  header: string;
 };
 
 export type Theme = { colors: Colors; fonts: Fonts };
@@ -18,6 +20,7 @@ export type Theme = { colors: Colors; fonts: Fonts };
 const fonts: Fonts = {
   medium: "Poppins_500Medium ",
   regular: "Poppins_400Regular",
+  header: "RobotoCondensed_700Bold",
 };
 
 const lightColors: Colors = {
@@ -28,6 +31,7 @@ const lightColors: Colors = {
   levelBackground: "#4b5563",
   highlightedLevelBackground: "#fbbf24",
   highlightedText: "#000",
+  white: "#fff",
 };
 
 const darkColors: Colors = {
@@ -38,6 +42,7 @@ const darkColors: Colors = {
   levelBackground: "#4b5563",
   highlightedLevelBackground: "#fbbf24",
   highlightedText: "#000",
+  white: "#fff",
 };
 
 export const lightTheme: Theme = { colors: lightColors, fonts: fonts };
