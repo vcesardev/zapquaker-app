@@ -14,22 +14,21 @@ type SpellAmountProps = {
 const SpellsAmount: React.FC<SpellAmountProps> = ({ eqAmount, zapAmount }) => {
   return (
     <Styled.Container>
-      {zapAmount ? (
+      {eqAmount ? (
         <Styled.ImageContainer>
-          <Styled.SpellImage source={ZapImage} />
+          <Styled.SpellImage source={EqImage} />
           <Styled.SpellAmountContainer>
-            <Styled.SpellQuantity>{zapAmount}x</Styled.SpellQuantity>
+            <Styled.SpellQuantity>{`${eqAmount}x`}</Styled.SpellQuantity>
           </Styled.SpellAmountContainer>
         </Styled.ImageContainer>
       ) : (
         <></>
       )}
-
-      {eqAmount ? (
+      {zapAmount ? (
         <Styled.ImageContainer>
-          <Styled.SpellImage source={EqImage} />
+          <Styled.SpellImage source={ZapImage} />
           <Styled.SpellAmountContainer>
-            <Styled.SpellQuantity>{eqAmount}x</Styled.SpellQuantity>
+            <Styled.SpellQuantity>{`${zapAmount}x`}</Styled.SpellQuantity>
           </Styled.SpellAmountContainer>
         </Styled.ImageContainer>
       ) : (

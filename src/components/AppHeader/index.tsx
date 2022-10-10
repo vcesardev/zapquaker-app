@@ -15,13 +15,13 @@ const AppHeader: React.FC<AppHeaderProps> = ({ onPressToggle, activeMode }) => {
     <Styled.Container>
       <Styled.HeaderContainer>
         <Styled.HeaderText>{`Bem vindo, \n Frosty`}</Styled.HeaderText>
-        <TouchableOpacity onPress={onPressToggle}>
+        <Styled.DisplayModeTouchable onPress={onPressToggle}>
           {activeMode === "light" ? (
             <Styled.LightModeLogo />
           ) : (
             <Styled.DarkModeLogo />
           )}
-        </TouchableOpacity>
+        </Styled.DisplayModeTouchable>
       </Styled.HeaderContainer>
     </Styled.Container>
   );

@@ -2,14 +2,14 @@
 
 import { eqSpellData } from "../config/spells/earthquake";
 import { zapSpellData } from "../config/spells/zap";
-import { BaseDefense } from "../models/Defenses";
+import { BaseDefense, DefenseData } from "../models/Defenses";
 import { ZapQuake } from "../models/Spells";
 
 type Props = {
   zapLevel: number;
   quakeLevel: number;
   spellCapacity: number;
-  building: BaseDefense;
+  building: DefenseData;
 };
 
 export function getZapQuakes(props: Props, buildingLevel: number): ZapQuake[] {

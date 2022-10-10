@@ -12,9 +12,12 @@ import { ZapQuake } from "../../models/Spells";
 import { BaseDefense } from "../../models/Defenses";
 import { getZapQuakes } from "../../utils/zapQuake";
 import SpellsAmount from "./components/SpellsAmount";
+import { TouchableOpacity, View } from "react-native";
+import { useTheme } from "styled-components";
 
 const DefenseCard: React.FC = () => {
-  const [activeElement, setActiveElement] = useState(1);
+  const theme = useTheme();
+  const [activeElement, setActiveElement] = useState(data.maxLevel);
 
   const [activeZapDamage, setActiveZapDamage] = useState(9);
   const [activeEqDamage, setActiveEqDamage] = useState(5);
@@ -43,6 +46,11 @@ const DefenseCard: React.FC = () => {
 
   return (
     <Styled.Container>
+      <Styled.SpellHeaderText>
+        Selecione abaixo os níveis das magias de sua vila, e logo após isso
+        selecione abaixo o nível da defesa que gostaria de destruir.
+      </Styled.SpellHeaderText>
+
       <Styled.SpellHeaderContainer>
         <SpellCard
           data={zapSpellData}
@@ -55,7 +63,6 @@ const DefenseCard: React.FC = () => {
           returnSpellDamage={handleEqDamage}
         />
       </Styled.SpellHeaderContainer>
-
       <Styled.DefenseContainer>
         <CardHeader
           hitpoints={data.hitpoints[activeElement - 1]}
@@ -71,13 +78,19 @@ const DefenseCard: React.FC = () => {
         />
       </Styled.DefenseContainer>
 
-      {zapQuakes.map((data, index) => (
-        <SpellsAmount
-          eqAmount={data.nbQuakes}
-          zapAmount={data.nbZaps}
-          key={index}
-        />
-      ))}
+      <Styled.DefenseContainer>
+        <Styled.SpellAmountText>Feitiços Necessários</Styled.SpellAmountText>
+        {zapQuakes.map(
+          (data, index) =>
+            index < 4 && (
+              <SpellsAmount
+                eqAmount={data.nbQuakes}
+                zapAmount={data.nbZaps}
+                key={index}
+              />
+            )
+        )}
+      </Styled.DefenseContainer>
     </Styled.Container>
   );
 };
