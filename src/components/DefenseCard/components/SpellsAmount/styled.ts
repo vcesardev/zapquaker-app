@@ -1,10 +1,11 @@
 import styled from "styled-components/native";
-import { widthPercentageToDP } from "../../../../utils";
+import { widthPercentageToDP, heightPercentageToDP } from "../../../../utils";
 import TextH1 from "../../../TextH1";
 
 export const Container = styled.View`
   flex-direction: row;
   justify-content: space-around;
+  margin-bottom: ${heightPercentageToDP("2%")}px;
   width: 60%;
 `;
 

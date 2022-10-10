@@ -1,7 +1,7 @@
 import TextH1 from "../TextH1";
 import styled from "styled-components/native";
 import TextH2 from "../TextH2";
-import { heightPercentageToDP } from "../../utils";
+import { heightPercentageToDP, widthPercentageToDP } from "../../utils";
 
 import LightSVG from "../../assets/icons/light-mode.svg";
 import DarkSVG from "../../assets/icons/dark-mode.svg";
@@ -20,12 +20,18 @@ export const HeaderContainer = styled.View`
 `;
 
 export const LightModeLogo = styled(LightSVG).attrs(({ theme }) => ({
-  fill: theme.colors.white,
+  fill: theme.colors.textSecondary,
 }))``;
 
 export const DarkModeLogo = styled(DarkSVG).attrs(({ theme }) => ({
-  fill: theme.colors.white,
+  fill: theme.colors.textSecondary,
 }))``;
+
+export const DisplayModeTouchable = styled.TouchableOpacity`
+  background-color: ${({ theme }) => theme.colors.secondary};
+  border-radius: ${widthPercentageToDP("10%")}px;
+  padding: ${widthPercentageToDP("2%")}px;
+`;
 
 export const HeaderText = styled(TextH2)`
   color: ${({ theme }) => theme.colors.white};
