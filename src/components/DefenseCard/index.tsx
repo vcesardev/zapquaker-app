@@ -1,29 +1,26 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useState } from "react";
 import * as Styled from "./styled";
 
 import BaseSlider from "../Slider";
 import CardHeader from "./components/CardHeader";
 
-import { data } from "../../config/defenses/airdefense";
+import { spelltowerDefenseData } from "../../config/defenses/spelltower";
 import SpellCard from "./components/SpellCard";
-import { zapSpellData } from "../../config/spells/zap";
+import { zapSpellData } from "../../config/spells/lightning";
 import { eqSpellData } from "../../config/spells/earthquake";
 import { ZapQuake } from "../../models/Spells";
-import { BaseDefense } from "../../models/Defenses";
 import { getZapQuakes } from "../../utils/zapQuake";
 import SpellsAmount from "./components/SpellsAmount";
-import { TouchableOpacity, View } from "react-native";
-import { useTheme } from "styled-components";
 
 const DefenseCard: React.FC = () => {
-  const theme = useTheme();
-  const [activeElement, setActiveElement] = useState(data.maxLevel);
+  const defenseData = spelltowerDefenseData;
+  const [activeElement, setActiveElement] = useState(defenseData.maxLevel);
 
-  const [activeZapDamage, setActiveZapDamage] = useState(9);
+  const [activeZapDamage, setActiveZapDamage] = useState(10);
   const [activeEqDamage, setActiveEqDamage] = useState(5);
   const zapQuakes: ZapQuake[] = getZapQuakes(
     {
-      building: { ...data, level: activeElement },
+      building: { ...defenseData, level: activeElement },
       quakeLevel: activeEqDamage,
       spellCapacity: 11,
       zapLevel: activeZapDamage,
@@ -65,15 +62,15 @@ const DefenseCard: React.FC = () => {
       </Styled.SpellHeaderContainer>
       <Styled.DefenseContainer>
         <CardHeader
-          hitpoints={data.hitpoints[activeElement - 1]}
-          id={data.id}
-          imageUrl={data?.imageUrl[activeElement - 1]}
+          hitpoints={defenseData.hitpoints[activeElement - 1]}
+          id={defenseData.id}
+          imageUrl={defenseData?.imageUrl[activeElement - 1]}
           level={activeElement}
-          name={data.name}
+          name={defenseData.name}
         />
         <BaseSlider
           currentValue={activeElement}
-          max={12}
+          max={defenseData.maxLevel}
           onChangeValue={(value: number[]) => handleSliderValue(value)}
         />
       </Styled.DefenseContainer>

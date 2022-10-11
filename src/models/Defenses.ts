@@ -14,5 +14,4 @@ export type DefenseData = {
   hitpoints: number[];
   name: string;
   maxLevel: number;
-  level?: number;
 };

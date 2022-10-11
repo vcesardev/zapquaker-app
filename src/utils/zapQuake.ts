@@ -1,7 +1,7 @@
 //THANK YOU BRYGHT7!!!
 
 import { eqSpellData } from "../config/spells/earthquake";
-import { zapSpellData } from "../config/spells/zap";
+import { zapSpellData } from "../config/spells/lightning";
 import { BaseDefense, DefenseData } from "../models/Defenses";
 import { ZapQuake } from "../models/Spells";
 
@@ -9,7 +9,9 @@ type Props = {
   zapLevel: number;
   quakeLevel: number;
   spellCapacity: number;
-  building: DefenseData;
+  building: DefenseData & {
+    level: number;
+  };
 };
 
 export function getZapQuakes(props: Props, buildingLevel: number): ZapQuake[] {

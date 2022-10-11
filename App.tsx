@@ -8,11 +8,12 @@ import {
 import { RobotoCondensed_700Bold } from "@expo-google-fonts/roboto-condensed";
 import AppLoading from "expo-app-loading";
 
-import { Home } from "./src/pages/Home";
+import { Defense } from "./src/pages/Defense";
 import { darkTheme, lightTheme } from "./src/theme";
 import { StatusBar } from "expo-status-bar";
 import AppHeader from "./src/components/AppHeader";
 import SafeKAV from "./src/components/SafeKAV";
+import { Defenses } from "./src/pages/Defenses";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -36,7 +37,8 @@ export default function App() {
       <ThemeProvider theme={activeTheme}>
         <SafeKAV>
           <AppHeader onPressToggle={themeToggler} activeMode={theme} />
-          <Home />
+          {/* <Defense /> */}
+          <Defenses />
           <StatusBar
             style="light"
             backgroundColor={activeTheme.colors.textPrimary}
