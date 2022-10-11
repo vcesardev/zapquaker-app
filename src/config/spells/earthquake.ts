@@ -1,6 +1,6 @@
-import { BaseSpell } from "../../../models/Spells";
+import { BaseSpell } from "../../models/Spells";
 
-import EQImage from "../../../assets/images/spells/spell-quake.png";
+import EQImage from "../../assets/images/spells/spell-quake.png";
 
 export const eqSpellData: BaseSpell = {
   id: "eq311233213211312",
