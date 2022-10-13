@@ -8,11 +8,12 @@ import { DefenseData } from "../../../../models/Defenses";
 
 type DefensesCardProps = {
   data: DefenseData;
+  onPressCard: (defenseData: DefenseData) => void;
 };
 
-const DefensesCard: React.FC<DefensesCardProps> = ({ data }) => {
+const DefensesCard: React.FC<DefensesCardProps> = ({ data, onPressCard }) => {
   return (
-    <Styled.Container>
+    <Styled.Container activeOpacity={0.8} onPress={() => onPressCard(data)}>
       <Styled.DefenseImage source={data.imageUrl[data.imageUrl.length - 1]} />
       <Styled.DefenseName>{data.name}</Styled.DefenseName>
     </Styled.Container>
