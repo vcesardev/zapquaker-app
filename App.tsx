@@ -1,3 +1,4 @@
+import "react-native-gesture-handler";
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import {
@@ -14,6 +15,8 @@ import { StatusBar } from "expo-status-bar";
 import AppHeader from "./src/components/AppHeader";
 import SafeKAV from "./src/components/SafeKAV";
 import { Defenses } from "./src/pages/Defenses";
+import { NavigationContainer } from "@react-navigation/native";
+import DefenseStack from "./src/routes/stacks.routes";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -34,17 +37,18 @@ export default function App() {
     return <AppLoading />;
   } else {
     return (
-      <ThemeProvider theme={activeTheme}>
-        <SafeKAV>
-          <AppHeader onPressToggle={themeToggler} activeMode={theme} />
-          {/* <Defense /> */}
-          <Defenses />
-          <StatusBar
-            style="light"
-            backgroundColor={activeTheme.colors.textPrimary}
-          />
-        </SafeKAV>
-      </ThemeProvider>
+      <NavigationContainer>
+        <ThemeProvider theme={activeTheme}>
+          <SafeKAV>
+            <AppHeader onPressToggle={themeToggler} activeMode={theme} />
+            <DefenseStack />
+            <StatusBar
+              style="light"
+              backgroundColor={activeTheme.colors.textPrimary}
+            />
+          </SafeKAV>
+        </ThemeProvider>
+      </NavigationContainer>
     );
   }
 }
