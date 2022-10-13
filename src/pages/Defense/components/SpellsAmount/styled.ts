@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 import { widthPercentageToDP, heightPercentageToDP } from "../../../../utils";
-import TextH1 from "../../../TextH1";
+import TextH1 from "../../../../components/TextH1";
 
 export const Container = styled.View`
   flex-direction: row;

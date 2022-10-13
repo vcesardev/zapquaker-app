@@ -4,7 +4,7 @@ import {
   widthPercentageToDP,
   fontScale,
 } from "../../../../utils";
-import TextH2 from "../../../TextH2";
+import TextH2 from "../../../../components/TextH2";
 
 type LevelContainerProps = {
   isMaxed: boolean;

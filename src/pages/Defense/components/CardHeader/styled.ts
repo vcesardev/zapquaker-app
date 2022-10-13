@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import { widthPercentageToDP } from "../../../../utils";
+import { heightPercentageToDP, widthPercentageToDP } from "../../../../utils";
 
 import TextH1 from "../../../../components/TextH1";
 import TextH2 from "../../../../components/TextH2";
@@ -20,6 +20,9 @@ export const DefenseImage = styled.Image.attrs(() => ({
 export const HeaderDataContainer = styled.View`
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: ${heightPercentageToDP("1%")}px;
+  max-width: 80%;
 `;
 
 export const DefenseName = styled(TextH1)`

@@ -4,7 +4,7 @@ import { ImageSourcePropType, Text, View } from "react-native";
 import * as Styled from "./styled";
 
 import SpellImage from "../../../../assets/images/spells/spell-lightning.png";
-import BaseSlider from "../../../Slider";
+import BaseSlider from "../../../../components/Slider";
 import { BaseSpell } from "../../../../models/Spells";
 
 type SpellCardProps = {
