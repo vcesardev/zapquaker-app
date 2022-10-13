@@ -5,6 +5,7 @@ import { heightPercentageToDP, widthPercentageToDP } from "../../utils";
 
 import LightSVG from "../../assets/icons/light-mode.svg";
 import DarkSVG from "../../assets/icons/dark-mode.svg";
+import ChevronSVG from "../../assets/icons/chevron-left.svg";
 
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.textPrimary};
@@ -27,6 +28,10 @@ export const DarkModeLogo = styled(DarkSVG).attrs(({ theme }) => ({
   fill: theme.colors.textSecondary,
 }))``;
 
+export const ChevronLeftIcon = styled(ChevronSVG).attrs(({ theme }) => ({
+  fill: theme.colors.textSecondary,
+}))``;
+
 export const DisplayModeTouchable = styled.TouchableOpacity`
   background-color: ${({ theme }) => theme.colors.secondary};
   border-radius: ${widthPercentageToDP("10%")}px;
@@ -35,4 +40,9 @@ export const DisplayModeTouchable = styled.TouchableOpacity`
 
 export const HeaderText = styled(TextH2)`
   color: ${({ theme }) => theme.colors.white};
+`;
+
+export const HeaderScreen = styled(TextH1)`
+  color: ${({ theme }) => theme.colors.white};
+  margin-right: ${widthPercentageToDP("3%")}px;
 `;
