@@ -1,21 +1,5 @@
 import { DefenseData } from "../../models/Defenses";
 
-import Image1 from "../../assets/images/defenses/mortars/23_1.png";
-import Image2 from "../../assets/images/defenses/mortars/23_2.png";
-import Image3 from "../../assets/images/defenses/mortars/23_3.png";
-import Image4 from "../../assets/images/defenses/mortars/23_4.png";
-import Image5 from "../../assets/images/defenses/mortars/23_5.png";
-import Image6 from "../../assets/images/defenses/mortars/23_6.png";
-import Image7 from "../../assets/images/defenses/mortars/23_7.png";
-import Image8 from "../../assets/images/defenses/mortars/23_8.png";
-import Image9 from "../../assets/images/defenses/mortars/23_9.png";
-import Image10 from "../../assets/images/defenses/mortars/23_10.png";
-import Image11 from "../../assets/images/defenses/mortars/23_11.png";
-import Image12 from "../../assets/images/defenses/mortars/23_12.png";
-import Image13 from "../../assets/images/defenses/mortars/23_13.png";
-import Image14 from "../../assets/images/defenses/mortars/23_14.png";
-import Image15 from "../../assets/images/defenses/mortars/23_15.png";
-
 export const mortarDefenseData: DefenseData = {
   id: "7132712721813267",
   maxLevel: 15,
@@ -25,20 +9,20 @@ export const mortarDefenseData: DefenseData = {
     2150,
   ],
   imageUrl: [
-    Image1,
-    Image2,
-    Image3,
-    Image4,
-    Image5,
-    Image6,
-    Image7,
-    Image8,
-    Image9,
-    Image10,
-    Image11,
-    Image12,
-    Image13,
-    Image14,
-    Image15,
+    "https://www.clashtrack.com/img/buildings/mortar_1.png",
+    "https://www.clashtrack.com/img/buildings/mortar_2.png",
+    "https://www.clashtrack.com/img/buildings/mortar_3.png",
+    "https://www.clashtrack.com/img/buildings/mortar_4.png",
+    "https://www.clashtrack.com/img/buildings/mortar_5.png",
+    "https://www.clashtrack.com/img/buildings/mortar_6.png",
+    "https://www.clashtrack.com/img/buildings/mortar_7.png",
+    "https://www.clashtrack.com/img/buildings/mortar_8.png",
+    "https://www.clashtrack.com/img/buildings/mortar_9.png",
+    "https://www.clashtrack.com/img/buildings/mortar_10.png",
+    "https://www.clashtrack.com/img/buildings/mortar_11.png",
+    "https://www.clashtrack.com/img/buildings/mortar_12.png",
+    "https://www.clashtrack.com/img/buildings/mortar_13.png",
+    "https://www.clashtrack.com/img/buildings/mortar_14.png",
+    "https://www.clashtrack.com/img/buildings/mortar_15.png",
   ],
 };

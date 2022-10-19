@@ -1,0 +1,41 @@
+import {
+  AttackType,
+  BaseTroop,
+  FavoriteTarget,
+  ResourceType,
+  TargetType,
+} from "../../models/Troop";
+
+export const barbarianTroopData: BaseTroop = {
+  id: "48267485723874387",
+  targetType: TargetType.Ground,
+  attackType: AttackType.Melee,
+  dps: [8, 11, 14, 18, 23, 26, 30, 34, 38, 42, 45],
+  barracksLevel: 1,
+  labLevel: [0, 1, 3, 5, 6, 7, 8, 9, 10, 12, 13],
+  hitpoints: [45, 54, 65, 85, 105, 125, 160, 205, 230, 250, 270],
+  spaces: 1,
+  trainingTime: 0.0833333,
+  maxLevel: 11,
+  researchTime: [0, 120, 300, 720, 1440, 2160, 3600, 4320, 10080, 18720, 20160],
+  imageUrl: [
+    "https://www.clashtrack.com/img/research/barbarian_1.png",
+    "https://www.clashtrack.com/img/research/barbarian_2.png",
+    "https://www.clashtrack.com/img/research/barbarian_3.png",
+    "https://www.clashtrack.com/img/research/barbarian_4.png",
+    "https://www.clashtrack.com/img/research/barbarian_5.png",
+    "https://www.clashtrack.com/img/research/barbarian_6.png",
+    "https://www.clashtrack.com/img/research/barbarian_7.png",
+    "https://www.clashtrack.com/img/research/barbarian_8.png",
+    "https://www.clashtrack.com/img/research/barbarian_9.png",
+    "https://www.clashtrack.com/img/research/barbarian_10.png",
+    "https://www.clashtrack.com/img/research/barbarian_11.png",
+  ],
+  resourceType: ResourceType.Elixir,
+  upgradeAmount: [
+    0, 20000, 60000, 200000, 650000, 1400000, 2100000, 2800000, 56000000,
+    14000000, 16000000,
+  ],
+  favoriteTarget: FavoriteTarget.Any,
+  name: "Bárbaro",
+};

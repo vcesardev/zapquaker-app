@@ -14,7 +14,7 @@ const CardHeader: React.FC<BaseDefense> = ({
 }) => {
   return (
     <Styled.DefenseHeaderContainer>
-      <Styled.DefenseImage source={imageUrl} />
+      <Styled.DefenseImage source={{ uri: imageUrl }} />
       <View>
         <Styled.HeaderDataContainer>
           <Styled.DefenseName>{name}</Styled.DefenseName>

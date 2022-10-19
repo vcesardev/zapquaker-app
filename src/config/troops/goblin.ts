@@ -1,0 +1,35 @@
+import {
+  AttackType,
+  BaseTroop,
+  FavoriteTarget,
+  ResourceType,
+  TargetType,
+} from "../../models/Troop";
+
+export const goblinTroopData: BaseTroop = {
+  id: "773713716731321",
+  attackType: AttackType.Melee,
+  dps: [11, 14, 19, 24, 32, 42, 52, 62],
+  barracksLevel: 4,
+  spaces: 1,
+  trainingTime: 0.1166,
+  favoriteTarget: FavoriteTarget.Resources,
+  upgradeAmount: [0, 45000, 175000, 500000, 1200000, 2000000, 3500000, 9000000],
+  hitpoints: [25, 30, 36, 46, 56, 76, 101, 126],
+  labLevel: [0, 1, 3, 5, 6, 7, 8, 10],
+  maxLevel: 8,
+  targetType: TargetType.Ground,
+  researchTime: [0, 300, 540, 720, 1440, 2160, 5760, 17280],
+  resourceType: ResourceType.Elixir,
+  imageUrl: [
+    "https://www.clashtrack.com/img/research/goblin_1.png",
+    "https://www.clashtrack.com/img/research/goblin_2.png",
+    "https://www.clashtrack.com/img/research/goblin_3.png",
+    "https://www.clashtrack.com/img/research/goblin_4.png",
+    "https://www.clashtrack.com/img/research/goblin_5.png",
+    "https://www.clashtrack.com/img/research/goblin_6.png",
+    "https://www.clashtrack.com/img/research/goblin_7.png",
+    "https://www.clashtrack.com/img/research/goblin_8.png",
+  ],
+  name: "Goblin",
+};

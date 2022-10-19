@@ -1,21 +1,5 @@
 import { DefenseData } from "../../models/Defenses";
 
-import Image1 from "../../assets/images/defenses/wizardtowers/24_1.png";
-import Image2 from "../../assets/images/defenses/wizardtowers/24_2.png";
-import Image3 from "../../assets/images/defenses/wizardtowers/24_3.png";
-import Image4 from "../../assets/images/defenses/wizardtowers/24_4.png";
-import Image5 from "../../assets/images/defenses/wizardtowers/24_5.png";
-import Image6 from "../../assets/images/defenses/wizardtowers/24_6.png";
-import Image7 from "../../assets/images/defenses/wizardtowers/24_7.png";
-import Image8 from "../../assets/images/defenses/wizardtowers/24_8.png";
-import Image9 from "../../assets/images/defenses/wizardtowers/24_9.png";
-import Image10 from "../../assets/images/defenses/wizardtowers/24_10.png";
-import Image11 from "../../assets/images/defenses/wizardtowers/24_11.png";
-import Image12 from "../../assets/images/defenses/wizardtowers/24_12.png";
-import Image13 from "../../assets/images/defenses/wizardtowers/24_13.png";
-import Image14 from "../../assets/images/defenses/wizardtowers/24_14.png";
-import Image15 from "../../assets/images/defenses/wizardtowers/24_15.png";
-
 export const wizardTowerDefenseData: DefenseData = {
   id: "827317831278",
   name: "Torre do Mago",
@@ -25,20 +9,20 @@ export const wizardTowerDefenseData: DefenseData = {
     2900, 3000,
   ],
   imageUrl: [
-    Image1,
-    Image2,
-    Image3,
-    Image4,
-    Image5,
-    Image6,
-    Image7,
-    Image8,
-    Image9,
-    Image10,
-    Image11,
-    Image12,
-    Image13,
-    Image14,
-    Image15,
+    "https://www.clashtrack.com/img/buildings/wizard_tower_1.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_2.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_3.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_4.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_5.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_6.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_7.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_8.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_9.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_10.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_11.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_12.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_13.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_14.png",
+    "https://www.clashtrack.com/img/buildings/wizard_tower_15.png",
   ],
 };

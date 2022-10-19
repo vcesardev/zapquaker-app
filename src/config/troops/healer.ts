@@ -1,0 +1,35 @@
+import {
+  AttackType,
+  FavoriteTarget,
+  HealingTroop,
+  ResourceType,
+  TargetType,
+} from "../../models/Troop";
+
+export const healerTroopData: HealingTroop = {
+  id: "893173789187931789382179",
+  attackType: AttackType.Ranged,
+  hitpoints: [500, 600, 840, 1176, 1500, 1600, 1700],
+  maxLevel: 7,
+  barracksLevel: 8,
+  favoriteTarget: FavoriteTarget.Allies,
+  labLevel: [0, 5, 6, 7, 9, 11, 12],
+  researchTime: [0, 720, 1440, 2880, 14400, 20160, 24480],
+  hps: [35, 42, 55, 65, 72, 72, 72],
+  hpsHero: [19, 23, 30, 35, 48, 56, 62],
+  spaces: 14,
+  upgradeAmount: [0, 450000, 900000, 2700000, 6000000, 13000000, 17000000],
+  trainingTime: 2,
+  targetType: TargetType.Ground,
+  resourceType: ResourceType.Elixir,
+  imageUrl: [
+    "https://www.clashtrack.com/img/research/healer_1.png",
+    "https://www.clashtrack.com/img/research/healer_2.png",
+    "https://www.clashtrack.com/img/research/healer_3.png",
+    "https://www.clashtrack.com/img/research/healer_4.png",
+    "https://www.clashtrack.com/img/research/healer_5.png",
+    "https://www.clashtrack.com/img/research/healer_6.png",
+    "https://www.clashtrack.com/img/research/healer_7.png",
+  ],
+  name: "Curadora",
+};

@@ -14,7 +14,9 @@ type DefensesCardProps = {
 const DefensesCard: React.FC<DefensesCardProps> = ({ data, onPressCard }) => {
   return (
     <Styled.Container activeOpacity={0.8} onPress={() => onPressCard(data)}>
-      <Styled.DefenseImage source={data.imageUrl[data.imageUrl.length - 1]} />
+      <Styled.DefenseImage
+        source={{ uri: data.imageUrl[data.imageUrl.length - 1] }}
+      />
       <Styled.DefenseName>{data.name}</Styled.DefenseName>
     </Styled.Container>
   );

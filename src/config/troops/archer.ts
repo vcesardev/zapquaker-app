@@ -1,0 +1,41 @@
+import {
+  AttackType,
+  BaseTroop,
+  FavoriteTarget,
+  ResourceType,
+  TargetType,
+} from "../../models/Troop";
+
+export const archerTroopData: BaseTroop = {
+  id: "98972782378187381",
+  targetType: TargetType.Both,
+  attackType: AttackType.Ranged,
+  barracksLevel: 2,
+  dps: [7, 9, 12, 16, 20, 22, 25, 28, 31, 34, 37],
+  hitpoints: [20, 23, 28, 33, 40, 44, 48, 52, 56, 60, 64],
+  resourceType: ResourceType.Elixir,
+  researchTime: [0, 180, 360, 720, 1440, 2160, 3600, 5040, 10080, 18720, 20160],
+  labLevel: [0, 1, 3, 5, 6, 7, 8, 9, 10, 12, 13],
+  maxLevel: 11,
+  spaces: 1,
+  trainingTime: 0.1,
+  upgradeAmount: [
+    0, 30000, 80000, 300000, 800000, 2000000, 2500000, 3200000, 6300000,
+    14500000, 16000000,
+  ],
+  name: "Arqueira",
+  imageUrl: [
+    "https://www.clashtrack.com/img/research/archer_1.png",
+    "https://www.clashtrack.com/img/research/archer_2.png",
+    "https://www.clashtrack.com/img/research/archer_3.png",
+    "https://www.clashtrack.com/img/research/archer_4.png",
+    "https://www.clashtrack.com/img/research/archer_5.png",
+    "https://www.clashtrack.com/img/research/archer_6.png",
+    "https://www.clashtrack.com/img/research/archer_7.png",
+    "https://www.clashtrack.com/img/research/archer_8.png",
+    "https://www.clashtrack.com/img/research/archer_9.png",
+    "https://www.clashtrack.com/img/research/archer_10.png",
+    "https://www.clashtrack.com/img/research/archer_11.png",
+  ],
+  favoriteTarget: FavoriteTarget.Any,
+};
