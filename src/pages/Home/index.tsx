@@ -15,20 +15,38 @@ const Home: React.FC = () => {
     navigate("Defesas");
   };
 
-  const sumValues = async (days: number, hours: number): Promise<void> => {
-    const daysToHours = days > 0 ? 24 * days : 0;
-    const hoursToMinutesConvert = hoursToMinutes(daysToHours + hours);
-    console.log(hoursToMinutesConvert);
+  const handleUpgradesPress = (): void => {
+    navigate("Upgrades");
   };
 
-  useEffect(() => {
-    sumValues(17, 0);
-  }, []);
+  // const sumValues = async (days: number, hours: number): Promise<void> => {
+  //   const daysToHours = days > 0 ? 24 * days : 0;
+  //   const hoursToMinutesConvert = hoursToMinutes(daysToHours + hours);
+  //   console.log(hoursToMinutesConvert);
+  // };
+
+  // useEffect(() => {
+  //   sumValues(16, 0);
+  // }, []);
 
   return (
     <SafeKAV>
       <Styled.Container>
-        <SectionOption thumbText="Zap&Quake" onPressSection={handleZapPress} />
+        <SectionOption
+          thumbText="Zap&Quake"
+          onPressSection={handleZapPress}
+          thumbImage={
+            "https://images.fanpedia.com/3/2020-06-sneak-peek-new-lightning-spell.jpg"
+          }
+        />
+
+        <SectionOption
+          thumbText="Upgrades"
+          onPressSection={handleUpgradesPress}
+          thumbImage={
+            "https://cocland.com/wp-content/uploads/2015/04/clash-of-clans-laboratory.jpg"
+          }
+        />
       </Styled.Container>
     </SafeKAV>
   );

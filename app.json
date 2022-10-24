@@ -6,6 +6,7 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "owner": "zapquake",
     "android": {
       "package": "com.clashinfoapp"
     }

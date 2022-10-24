@@ -20,4 +20,11 @@ export const electrotitanTroopData: BaseTroop = {
   resourceType: ResourceType.Elixir,
   spaces: 32,
   targetType: TargetType.Both,
+  imageUrl: [
+    "https://static.wikia.nocookie.net/clashofclans/images/b/bd/Electro_Titan1.png/revision/latest?cb=20221012220116",
+    "https://static.wikia.nocookie.net/clashofclans/images/1/12/Electro_Titan2.png/revision/latest?cb=20221012220117",
+    "https://static.wikia.nocookie.net/clashofclans/images/d/d1/Electro_Titan3.png/revision/latest?cb=20221012220118",
+  ],
+  trainingTime: 2,
+  upgradeAmount: [0, 19500000, 20500000],
 };

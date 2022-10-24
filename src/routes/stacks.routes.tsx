@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Defenses } from "../pages/Defenses";
 import { Defense } from "../pages/Defense";
 import Home from "../pages/Home";
+import UpgradesOptions from "../pages/UpgradesOptions";
 
 const DefensesStack = createStackNavigator();
 
@@ -16,6 +17,7 @@ const DefenseStack = (): JSX.Element => {
       <DefensesStack.Screen name="Home" component={Home} />
       <DefensesStack.Screen name="Defesas" component={Defenses} />
       <DefensesStack.Screen name="Defesa" component={Defense} />
+      <DefensesStack.Screen name="Upgrades" component={UpgradesOptions} />
     </DefensesStack.Navigator>
   );
 };

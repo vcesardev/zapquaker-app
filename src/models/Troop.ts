@@ -39,7 +39,7 @@ export type BaseTroop = {
   trainingTime: number;
   attackType: AttackType;
   targetType: TargetType;
-  resourceType: ResourceType.Elixir;
+  resourceType: ResourceType;
   upgradeAmount: number[];
   favoriteTarget: FavoriteTarget;
 };
@@ -47,4 +47,20 @@ export type BaseTroop = {
 export type HealingTroop = Omit<BaseTroop, "dps"> & {
   hps: number[];
   hpsHero: number[];
+};
+
+export type SummoningTroop = BaseTroop & {
+  unitsSummoned: number[];
+};
+
+export type IceGolemTroop = BaseTroop & {
+  freezingTime: number[];
+};
+
+export type GenericTroopType = BaseTroop & {
+  hps?: number[];
+  hpsHero?: number[];
+  unitsSummoned?: number[];
+  freezingTime?: number[];
+  dps?: number[];
 };

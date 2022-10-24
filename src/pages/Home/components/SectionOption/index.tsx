@@ -8,15 +8,17 @@ import ThumbImage from "../../../../assets/images/zap-thumb.png";
 type SectionOptionProps = {
   onPressSection: () => void;
   thumbText: string;
+  thumbImage: string;
 };
 
 const SectionOption: React.FC<SectionOptionProps> = ({
   onPressSection,
   thumbText,
+  thumbImage,
 }) => {
   return (
     <Styled.Container activeOpacity={0.8} onPress={onPressSection}>
-      <Styled.ThumbImage source={ThumbImage} />
+      <Styled.ThumbImage source={{ uri: thumbImage }} />
       <Styled.ThumbText>{thumbText}</Styled.ThumbText>
     </Styled.Container>
   );

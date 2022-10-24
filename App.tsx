@@ -1,5 +1,5 @@
 import "react-native-gesture-handler";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import {
   useFonts,
@@ -9,16 +9,18 @@ import {
 import { RobotoCondensed_700Bold } from "@expo-google-fonts/roboto-condensed";
 import AppLoading from "expo-app-loading";
 
-import { Defense } from "./src/pages/Defense";
 import { darkTheme, lightTheme } from "./src/theme";
 import { StatusBar } from "expo-status-bar";
 import AppHeader from "./src/components/AppHeader";
 import SafeKAV from "./src/components/SafeKAV";
-import { Defenses } from "./src/pages/Defenses";
-import { NavigationContainer } from "@react-navigation/native";
+import {
+  NavigationContainer,
+  useNavigationContainerRef,
+} from "@react-navigation/native";
 import DefenseStack from "./src/routes/stacks.routes";
 
 export default function App() {
+  const navigationRef = useNavigationContainerRef();
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
@@ -33,11 +35,16 @@ export default function App() {
 
   const activeTheme = theme === "light" ? lightTheme : darkTheme;
 
+  useEffect(() => {
+    const test = navigationRef.getCurrentRoute();
+    console.log(test);
+  }, [navigationRef.getState()]);
+
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
     return (
-      <NavigationContainer>
+      <NavigationContainer ref={navigationRef}>
         <ThemeProvider theme={activeTheme}>
           <SafeKAV>
             <AppHeader onPressToggle={themeToggler} activeMode={theme} />

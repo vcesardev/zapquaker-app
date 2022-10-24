@@ -14,7 +14,7 @@ type AppHeaderProps = {
 
 const AppHeader: React.FC<AppHeaderProps> = ({ onPressToggle, activeMode }) => {
   const state = useNavigationState((state) => state);
-  const { goBack } = useNavigation();
+  const { goBack, getState } = useNavigation();
 
   const [currentScreenName, setCurrentScreenName] = useState("Home");
 
