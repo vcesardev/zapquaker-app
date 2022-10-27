@@ -27,7 +27,8 @@ export enum FavoriteTarget {
 
 export type BaseTroop = {
   maxLevel: number;
-  dps: number[];
+  dps?: number[];
+  description?: string;
   hitpoints: number[];
   labLevel: number[];
   researchTime: number[];
