@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from "react";
-import { View } from "react-native";
 import { Slider } from "@miblanchard/react-native-slider";
 
 import * as Styled from "./styled";
