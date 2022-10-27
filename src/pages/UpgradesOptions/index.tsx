@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import SafeKAV from "../../components/SafeKAV";
 import { troopsData } from "../../config/troops";
@@ -7,8 +8,10 @@ import UpgradeOptionCard from "./components/UpgradeOptionCard";
 import * as Styled from "./styled";
 
 const UpgradesOptions: React.FC = () => {
+  const { navigate } = useNavigation();
+
   const handleOptionPress = (item: GenericTroopType): void => {
-    console.log(item);
+    navigate("Upgrade", { option: item });
   };
 
   return (

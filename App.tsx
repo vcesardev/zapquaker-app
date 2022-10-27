@@ -35,11 +35,6 @@ export default function App() {
 
   const activeTheme = theme === "light" ? lightTheme : darkTheme;
 
-  useEffect(() => {
-    const test = navigationRef.getCurrentRoute();
-    console.log(test);
-  }, [navigationRef.getState()]);
-
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
