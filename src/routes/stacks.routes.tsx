@@ -5,6 +5,7 @@ import { Defenses } from "../pages/Defenses";
 import { Defense } from "../pages/Defense";
 import Home from "../pages/Home";
 import UpgradesOptions from "../pages/UpgradesOptions";
+import UpgradeOption from "../pages/UpgradeOption";
 
 const DefensesStack = createStackNavigator();
 
@@ -18,6 +19,7 @@ const DefenseStack = (): JSX.Element => {
       <DefensesStack.Screen name="Defesas" component={Defenses} />
       <DefensesStack.Screen name="Defesa" component={Defense} />
       <DefensesStack.Screen name="Upgrades" component={UpgradesOptions} />
+      <DefensesStack.Screen name="Upgrade" component={UpgradeOption} />
     </DefensesStack.Navigator>
   );
 };
