@@ -12,7 +12,7 @@ export const Container = styled.TouchableOpacity`
   border-radius: ${widthPercentageToDP("4%")}px;
   justify-content: center;
   width: ${widthPercentageToDP("45%")}px;
-  height: ${widthPercentageToDP("45%")};
+  height: ${widthPercentageToDP("45%")}px;
   margin-bottom: ${heightPercentageToDP("2%")}px;
 `;
 
