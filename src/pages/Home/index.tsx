@@ -19,15 +19,15 @@ const Home: React.FC = () => {
     navigate("Upgrades");
   };
 
-  // const sumValues = async (days: number, hours: number): Promise<void> => {
-  //   const daysToHours = days > 0 ? 24 * days : 0;
-  //   const hoursToMinutesConvert = hoursToMinutes(daysToHours + hours);
-  //   console.log(hoursToMinutesConvert);
-  // };
+  const sumValues = async (days: number, hours: number): Promise<void> => {
+    const daysToHours = days > 0 ? 24 * days : 0;
+    const hoursToMinutesConvert = hoursToMinutes(daysToHours + hours);
+    console.log(hoursToMinutesConvert);
+  };
 
-  // useEffect(() => {
-  //   sumValues(16, 0);
-  // }, []);
+  useEffect(() => {
+    sumValues(16, 12);
+  }, []);
 
   return (
     <SafeKAV>
